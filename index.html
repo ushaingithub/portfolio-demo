@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" type="text/css" href="./styles_pf.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script> 
+
+
+ 
+
+$(document).ready(function(){
+
+    $(".li-work").click(function(){
+   $(".work-exe").show();
+   $(".slide-show").hide();
+   $("#about-id").hide();
+   
+   });
+   
+   $(".li-about").click(function(){
+  
+   $(".pic-with-desc-about").show();
+   $(".work-exe").hide();
+   $(".slide-show").hide();
+   
+   });
+   
+    $(".li-home").click(function(){
+   $(".work-exe").hide();
+   $(".slide-show").show();
+  
+   });
+   
+    $("#arrow-down").click(function(){
+	$(".pic-with-desc").toggle();        
+    });
+	
+	
+});
+
+$(function() {
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 200) {
+            $(".header-top").addClass('smaller');
+        } else {
+            $(".header-top").removeClass("smaller");
+        }
+    });
+});
+</script> 
+
+</head>
+
+<body>
+<header id="header" role="banner">
+ <div class="header-top" id = "header-top-id">
+ <div class="header-nav-group">
+			<div class="header-logo" id= "header-logo-id">
+				<img class="logo" src="U-logo.jpg" />
+				<title>Usha Log</title>
+				<div class="logo-name">
+					<h2>Usha Prudhvi</h2>
+					<h3>Front End Developer </h3>
+				</div>
+			</div>
+ <div class="navbar-top" id="navbar-id">
+			<ul class="nav-top-ul">
+			<li class="li-home">
+			<a href="#main-id">Home</a>
+			</li>
+			<li class="li-about">
+			<a href="#about-id">About</a>
+			</li>
+			<li class="li-work">
+			<a href="#work-id">Illustrations</a>
+			</li>
+			<li><a href="blogs.html">My Blogs</a></li>
+			
+			</ul>
+</div>	
+</div>
+<!-- <div class="intro-desc">
+<h1> RESPONSIVE FRONT-END DEVELOPER</h1>
+<ul class="skill-list">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JAVA SCRIPT</li>
+				<li>JQuery</li>
+				<li>Responsive Design</li>
+				</ul>
+				
+</div> -->
+
+</div>
+</header>
+<div class="backimage"></div>
+<div id="main-page" class="main-class">
+<section id="home" class="home-section">
+		<div id="home-page" class="home-content">
+			<h1>HI...  <strong>I AM  USHA </strong>  </h1>
+			<h3>A Front-End Developer</h3>
+		</div>
+		
+		
+</section>	
+<section class="learn-more">
+  <a class="learn" href="#about-id">Learn More about Me<br>
+  <i class=" fa fa-arrow-down">
+  </i>
+  </a>
+</section>	
+
+</div>
+
+
+	
+<div class="slide-show" id ="main-id">
+	<section id="slide-col-1">
+	<div class="img-container img-constraint">
+	<img class="mySlides" style="width:500px; height:300px;" src="img1.png" />
+	<img class="mySlides" style="width:500px; height:300px;" src="img3.png" />
+	<img class="mySlides" style="width:500px; height:300px;" src="pink.png"/>
+	<img class="mySlides" style="width:500px; height:300px;" src="img3.png" />
+		
+	<script>
+	var slideIndex=0;
+	Carousel();
+	
+	function Carousel(){
+	var i;
+	var x = document.getElementsByClassName("mySlides");
+	for(i=0;i<x.length; i++)
+	{
+	   x[i].style.display = "none";
+	}
+	slideIndex++;
+	if ( slideIndex > x.length ) { slideIndex = 1 }
+	x[slideIndex-1].style.display = "block";
+	setTimeout(Carousel, 2000);
+	}
+	</script>
+	</div>
+	</section>
+	<input type="button" name="b1" onclick="document.getElementById('about-id').scrollIntoView();" 
+value= "portfolio"/> 
+</div>	
+	
+<!--<div class="about-home about-click" id="about-id" style="display:none;" >
+			<section class="intro" >
+			<h2>FRONT-END WEB DEVELOPER</h2>
+				<ul class="skill-list">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JAVA SCRIPT</li>
+				<li>JQuery</li>
+				</ul>
+<!-- <div id="flip" > view portfolio</div> 
+			</section>
+			</div> -->
+<div  class="arrow" id="arrow-down" style="display:none;"></div>
+
+<div class= "pic-with-desc-about pic-with-desc"  id="about-id" 	 >
+		
+				<section id="left-id">
+				<img src="usha.jpg" id="profile_pic" height="300" width="300"/>
+				</section>
+		
+		
+				<section id="right-id">
+				<p>Hi, My Name is Usha. I worked as a Level3 Application Support Analyst for 6 years. During this period i have done customizations and worked closely on databases and unix shell scripting. After my career break, my passion towards web technology and web designing has put me in the field of website development and blog customizations.
+				
+				With self-interest and passion towards development i have created my dream project using Responise Web Designing. i Have skill set on HTML, JAVASCRIPT CSS and Jquery. I have worked on all phases of softwae development life cycle.  </p>
+				</section>
+		
+</div>
+</div>
+
+<div class="work-exe" id="work-id" style="display:none">
+<div class="columns">
+<section id="section-1">
+<img src="pink.png" width="300px" height="300px"/>
+</section>
+<section id="section-2">
+<img src="nature.png" width="300px" height="300px"/>
+</section>
+</div>
+</div>
+</body>
+
+ </html>
